@@ -3,11 +3,20 @@
     "pins": [
       {
         "package": "Starscream",
-        "repositoryURL": "https://github.com/daltoniam/Starscream",
+        "repositoryURL": "https://github.com/RaesakAce/Starscream",
         "state": {
-          "branch": null,
-          "revision": "9c03ef715d1bc9334b446c90df53586dd38cf849",
-          "version": "3.1.0"
+          "branch": "master",
+          "revision": "9824c3b97a5541e05c5b2541f2a4447f8ca24e9a",
+          "version": null
+        }
+      },
+      {
+        "package": "swift-crypto",
+        "repositoryURL": "https://github.com/apple/swift-crypto",
+        "state": {
+          "branch": "main",
+          "revision": "8f4bfa5bc1951440c15710e9e893721aa4b2765c",
+          "version": null
         }
       }
     ]
