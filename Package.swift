@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "SocketIO", targets: ["SocketIO"])
     ],
     dependencies: [
-        .Package(url: "https://github.com/vapor/engine", majorVersion: 2)
+        .package(url: "https://github.com/vapor/engine", majorVersion: 2)
     ],
     targets: [
         .target(name: "SocketIO", dependencies: ["Engine"]),
