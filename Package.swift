@@ -8,17 +8,11 @@ let package = Package(
     products: [
         .library(name: "SocketIO", targets: ["SocketIO"])
     ],
-    dependencies: deps,
+    dependencies: [
+        .Package(url: "https://github.com/vapor/engine", majorVersion: 2)
+    ],
     targets: [
         .target(name: "SocketIO", dependencies: ["Engine"]),
         .testTarget(name: "TestSocketIO", dependencies: ["SocketIO"]),
     ]
 )
-
-let deps: [Package.Dependency]
-
-#if !os(Linux)
-deps = [.Package(url: "https://github.com/nuclearace/Starscream", majorVersion: 8)]
-#else
-deps = [.Package(url: "https://github.com/vapor/engine", majorVersion: 2)]
-#endif
