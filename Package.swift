@@ -1,18 +1,17 @@
-// swift-tools-version:5.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:4.0
 
 import PackageDescription
 
 let package = Package(
-    name: "SocketIO",
-    products: [
-        .library(name: "SocketIO", targets: ["SocketIO"])
-    ],
-    dependencies: [
-        .package(url: "https://github.com/vapor/engine", majorVersion: 2)
-    ],
-    targets: [
-        .target(name: "SocketIO", dependencies: ["Engine"]),
-        .testTarget(name: "TestSocketIO", dependencies: ["SocketIO"]),
-    ]
+        name: "SocketIO",
+        products: [
+            .library(name: "SocketIO", targets: ["SocketIO"])
+        ],
+        dependencies: [
+            .package(url: "https://github.com/vapor/http", from: "3.0.0"),
+        ],
+        targets: [
+            .target(name: "SocketIO", dependencies: [.product(name: "HTTPKit", package: "http"),]),
+            .testTarget(name: "TestSocketIO", dependencies: ["SocketIO"]),
+        ]
 )
